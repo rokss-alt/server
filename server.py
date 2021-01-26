@@ -14,3 +14,12 @@ while True:
     msg = f'{len(msg):<{Headersize}}' + msg
 
     clientsocket.send(bytes(msg, "utf-8"))
+
+    command = input("what do want to do: ")
+
+    if command == "help":
+        print("Commands: stop(kick all who are connected)")
+
+
+    if command == "stop":
+        clientsocket.close()
