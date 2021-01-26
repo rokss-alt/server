@@ -24,3 +24,5 @@ while True:
 
         if command == "stop":
             clientsocket.close()
+            
+        break   
