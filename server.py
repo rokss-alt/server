@@ -15,11 +15,12 @@ while True:
 
     clientsocket.send(bytes(msg, "utf-8"))
 
-    command = input("what do want to do: ")
+    while True:
+        command = input("what do want to do: ")
 
-    if command == "help":
-        print("Commands: stop(kick all who are connected)")
+        if command == "help":
+            print("Commands: stop(kick all who are connected)")
 
 
-    if command == "stop":
-        clientsocket.close()
+        if command == "stop":
+            clientsocket.close()
